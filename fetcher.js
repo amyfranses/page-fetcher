@@ -6,7 +6,7 @@ const request = require("request");
 const url = args[0];
 const saveFile = args[1];
 
-request("https://www.example.edu/ ", (error, response, body) => {
+request(url, (error, response, body) => {
   fs.writeFile(url, body, (error) => {
     if (!error) {
       return;
